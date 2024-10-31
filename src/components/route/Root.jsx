@@ -1,7 +1,9 @@
+import Navbar from "../Header/Navbar/Navbar";
+
 const Root = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
+    <div className="max-w-screen-xl mx-auto px-5">
+      <Navbar></Navbar>
     </div>
   );
 };
