@@ -1,12 +1,21 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavPageLink = ({ item }) => {
   return (
     <>
       <li>
-        <Link className="text-lg text-base-content-secondary" to={item.path}>
+        <NavLink
+          className={({ isActive }) =>
+            `btn text-base text-base-content-secondary ${
+              isActive
+                ? "border-primary text-primary bg-transparent hover:bg-transparent hover:border-primary"
+                : "bg-transparent border-none shadow-none bg-none hover:bg-transparent hover:text-base-content"
+            }`
+          }
+          to={item.path}
+        >
           {item.name}
-        </Link>
+        </NavLink>
       </li>
     </>
   );
